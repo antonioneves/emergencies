@@ -2,19 +2,21 @@
 
 <p-table [value]="emergencies">
   <ng-template pTemplate="header">
-      <tr>
-          <th>Emergency Id</th>
-          <th>Occurence Time</th>
-          <th>Device Serial Number</th>
-          <th>User</th>
-      </tr>
+    <tr>
+      <th>Emergency Id</th>
+      <th>Occurence Time</th>
+      <th>Device Serial Number</th>
+      <th>User</th>
+    </tr>
   </ng-template>
   <ng-template pTemplate="body" let-emergency>
-      <tr>
-          <td>{{emergency.emergency.emergencyId}}</td>
-          <td>{{emergency.emergency.requestTime | date:'full'}}</td>
-          <td>{{emergency.device.serialNumber}}</td>
-          <td>{{emergency.holder.firstName + ' ' + emergency.holder.lastName}}</td>
-      </tr>
+    <tr>
+      <td>{{ emergency.emergency.emergencyId }}</td>
+      <td>{{ emergency.emergency.requestTime | date: "full" }}</td>
+      <td>{{ emergency.device.serialNumber }}</td>
+      <td>
+        {{ emergency.holder.firstName + " " + emergency.holder.lastName }}
+      </td>
+    </tr>
   </ng-template>
 </p-table>
