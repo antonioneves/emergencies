@@ -8,7 +8,7 @@ import { Emergency } from '../../models/emergency.model';
   styleUrls: ['./emergency-data.component.sass']
 })
 export class EmergencyDataComponent implements OnInit {
-  private emergencies: Emergency[] = [];
+  public emergencies: Emergency[] = [];
 
   constructor(private emergencyService: EmergenciesService) {
   }
