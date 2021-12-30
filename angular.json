@@ -78,7 +78,8 @@
               "browserTarget": "emergency-table:build:production"
             },
             "development": {
-              "browserTarget": "emergency-table:build:development"
+              "browserTarget": "emergency-table:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
