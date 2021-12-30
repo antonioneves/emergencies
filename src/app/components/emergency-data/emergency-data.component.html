@@ -1,3 +1,5 @@
+<h1>Emergencies</h1>
+
 <p-table [value]="emergencies">
   <ng-template pTemplate="header">
       <tr>
@@ -10,7 +12,7 @@
   <ng-template pTemplate="body" let-emergency>
       <tr>
           <td>{{emergency.emergency.emergencyId}}</td>
-          <td>{{emergency.emergency.requestTime}}</td>
+          <td>{{emergency.emergency.requestTime | date:'full'}}</td>
           <td>{{emergency.device.serialNumber}}</td>
           <td>{{emergency.holder.firstName + ' ' + emergency.holder.lastName}}</td>
       </tr>
